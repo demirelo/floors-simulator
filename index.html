@@ -145,8 +145,8 @@
   .time-cursor { stroke: var(--warn); stroke-width: 1.2; stroke-dasharray: 3 3; opacity: 0.9; }
   .spot-dot  { fill: var(--floors); stroke: #0a1118; stroke-width: 1.2; }
   .floor-dot { fill: var(--floor);  stroke: #0a1118; stroke-width: 1.2; }
-  .legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 13px; color: var(--mute); margin-bottom: 8px; align-items: center; }
-  .legend span.swatch { display: inline-block; width: 20px; height: 4px; vertical-align: middle; margin-right: 6px; border-radius: 2px; }
+  .legend { display: flex; gap: 22px; flex-wrap: wrap; font-size: 16px; color: var(--mute); margin-bottom: 12px; align-items: center; }
+  .legend span.swatch { display: inline-block; width: 28px; height: 6px; vertical-align: middle; margin-right: 8px; border-radius: 3px; }
 </style>
 </head>
 <body>
@@ -577,7 +577,7 @@ function updateMetrics(dayIdx) {
   document.getElementById("m-supply").textContent = fmtSupply(d.total_supply);
   document.getElementById("m-supply-d").textContent = "floor: " + fmtSupply(d.floor_supply);
   document.getElementById("m-reserves").textContent = fmtUsd(d.floor_reserves);
-  document.getElementById("m-reserves-d").textContent = "cum. fees→floor: " + fmtUsd(d.cum_floor_inj);
+  document.getElementById("m-reserves-d").textContent = "total injected: " + fmtUsd(d.cum_floor_inj);
   document.getElementById("m-devco").textContent = fmtUsd(d.cum_devco || 0);
   document.getElementById("m-devco-d").textContent = "total fees: " + fmtUsd(d.cum_fees || 0);
   // LRE activity card: shows $ reallocated premium → floor + event count
