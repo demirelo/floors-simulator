@@ -246,7 +246,7 @@
     <div class="metric"><div class="k">Floor Price</div><div class="v" id="m-floor">—</div><div class="delta" id="m-floor-d">—</div></div>
     <div class="metric"><div class="k">Actual Price</div><div class="v" id="m-actual">—</div><div class="delta" id="m-actual-d">—</div></div>
     <div class="metric"><div class="k">Total Supply</div><div class="v" id="m-supply">—</div><div class="delta" id="m-supply-d">—</div></div>
-    <div class="metric"><div class="k">Floor Reserves</div><div class="v" id="m-reserves">—</div><div class="delta" id="m-reserves-d">—</div></div>
+    <div class="metric"><div class="k">Floor Reserves (USDC)</div><div class="v" id="m-reserves">—</div><div class="delta" id="m-reserves-d">—</div></div>
     <div class="metric"><div class="k">DevCo Revenue</div><div class="v" id="m-devco">—</div><div class="delta" id="m-devco-d">10% of fees</div></div>
     <div class="metric"><div class="k">LRE Reallocated</div><div class="v" id="m-lre">—</div><div class="delta" id="m-lre-d">— events</div></div>
     <div class="metric"><div class="k">Floor Growth</div><div class="v" id="m-growth">—</div><div class="delta" id="m-growth-d">APY: —</div></div>
@@ -577,7 +577,7 @@ function updateMetrics(dayIdx) {
   document.getElementById("m-supply").textContent = fmtSupply(d.total_supply);
   document.getElementById("m-supply-d").textContent = "floor: " + fmtSupply(d.floor_supply);
   document.getElementById("m-reserves").textContent = fmtUsd(d.floor_reserves);
-  document.getElementById("m-reserves-d").textContent = "→ floor: " + fmtUsd(d.cum_floor_inj);
+  document.getElementById("m-reserves-d").textContent = "cum. fees→floor: " + fmtUsd(d.cum_floor_inj);
   document.getElementById("m-devco").textContent = fmtUsd(d.cum_devco || 0);
   document.getElementById("m-devco-d").textContent = "total fees: " + fmtUsd(d.cum_fees || 0);
   // LRE activity card: shows $ reallocated premium → floor + event count
